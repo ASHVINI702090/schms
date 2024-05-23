@@ -1,3 +1,4 @@
+import 'package:chms/features/home/home_page.dart';
 import 'package:chms/features/suppliers/suppliers_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -21,11 +22,21 @@ class Dashboard extends HookWidget {
             icon: Icon(Icons.supervised_user_circle_outlined),
             label: 'Suppliers',
           ),
+          NavigationDestination(
+            icon: Icon(Icons.list),
+            label: 'Orders',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.inventory_outlined),
+            label: 'Inventory',
+          ),
         ],
       ),
       body: [
-        Scaffold(),
+        HomePage(),
         SupplersPage(),
+        Scaffold(),
+        Scaffold(),
       ][index.value],
     );
   }

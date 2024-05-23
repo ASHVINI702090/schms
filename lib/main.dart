@@ -36,10 +36,10 @@ class MyApp extends ConsumerWidget {
         useMaterial3: true,
         inputDecorationTheme:  InputDecorationTheme(
           filled: true,
-        )
+        ),
       ),
       routerConfig: ref.read(routerProvider),
-      
+      debugShowCheckedModeBanner: false,
     );
   }
 }
